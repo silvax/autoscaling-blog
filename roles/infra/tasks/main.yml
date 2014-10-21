@@ -24,7 +24,7 @@
         instance_port: 80
     health_check:
         ping_protocol: http # options are http, https, ssl, tcp
-        ping_port: 8080
+        ping_port: "{{ elb_health_check_port }}"
         ping_path: "/" # not required for tcp or ssl
         response_timeout: 5 # seconds
         interval: 30 # seconds
